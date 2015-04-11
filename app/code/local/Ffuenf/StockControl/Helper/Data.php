@@ -16,13 +16,14 @@
      * @license        http://opensource.org/licenses/mit-license.php MIT License
 */
 
+namespace Ffuenf_StockControl;
 class Ffuenf_StockControl_Helper_Data extends Mage_Core_Helper_Abstract
 {
 
     /**
-     * Path for the config for extension active status
-     */
-    const CONFIG_EXTENSION_ACTIVE = 'ffuenf/stockcontrol/general/enabled';
+    * Path for the config for extension active status
+    */
+    const CONFIG_EXTENSION_ACTIVE = 'stockcontrol/general/enabled';
 
     /**
      * Variable for if the extension is active

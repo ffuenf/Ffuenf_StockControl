@@ -16,6 +16,7 @@
  * @license        http://opensource.org/licenses/mit-license.php MIT License
 */
 
+namespace Ffuenf_StockControl;
 class Ffuenf_StockControl_Block_Adminhtml_Stockcontrol extends Mage_Adminhtml_Block_Widget_Grid_Container
 {
     public function __construct()

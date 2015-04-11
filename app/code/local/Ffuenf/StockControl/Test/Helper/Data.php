@@ -16,6 +16,7 @@
      * @license        http://opensource.org/licenses/mit-license.php MIT License
 */
 
+namespace Ffuenf_StockControl;
 class Ffuenf_StockControl_Test_Helper_Data extends EcomDev_PHPUnit_Test_Case
 {
     /**

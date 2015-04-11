@@ -1,2 +1,2 @@
 config:
-  ffuenf/stockcontrol/general/enabled: 1
+  stockcontrol/general/enabled: 1

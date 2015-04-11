@@ -16,6 +16,7 @@
      * @license        http://opensource.org/licenses/mit-license.php MIT License
 */
 
+namespace Ffuenf_StockControl;
 class Ffuenf_StockControl_Model_Source_Order
 {
     public function toOptionArray()
