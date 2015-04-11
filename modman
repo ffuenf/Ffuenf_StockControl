@@ -1,0 +1,6 @@
+app/code/local/Ffuenf/StockControl app/code/local/Ffuenf/StockControl
+app/design/adminhtml/default/default/layout/ffuenf/stockcontrol.xml app/design/adminhtml/default/default/layout/ffuenf/stockcontrol.xml
+app/design/adminhtml/default/default/template/ffuenf/stockcontrol app/design/adminhtml/default/default/template/ffuenf/stockcontrol
+app/etc/modules/Ffuenf_StockControl.xml app/etc/modules/Ffuenf_StockControl.xml
+app/locale/en_US/Ffuenf_StockControl.csv app/locale/en_US/Ffuenf_StockControl.csv
+app/locale/de_DE/Ffuenf_StockControl.csv app/locale/de_DE/Ffuenf_StockControl.csv

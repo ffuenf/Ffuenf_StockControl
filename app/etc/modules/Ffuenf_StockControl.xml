@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Ffuenf_StockControl>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Mage_Catalog />
+                <Mage_CatalogInventory />
+            </depends>
+        </Ffuenf_StockControl>
+    </modules>
+</config>

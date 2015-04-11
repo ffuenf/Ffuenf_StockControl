@@ -1,0 +1,31 @@
+{
+  "name": "Ffuenf/Ffuenf_StockControl",
+  "license": "MIT",
+  "description": "This extension provides an easy-to-use admin grid displaying the important stock information for your store.",
+  "authors": [
+    {
+      "name": "Achim Rosenhagen",
+      "email": "a.rosenhagen@ffuenf.de"
+    },
+    {
+      "name": "Adam Moss"
+    }
+  ],
+  "type": "magento-module",
+  "require": {
+    "magento-hackathon/magento-composer-installer": "*",
+    "colinmollenhour/modman": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "3.7.*"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "http://packages.firegento.com"
+    }
+  ],
+  "extra": {
+    "magento-root-dir": "./magento/"
+  }
+}

@@ -1,0 +1,29 @@
+<script>
+    function updateStock(button, fieldId)
+    {
+        <?php 
+        if (Mage::getStoreConfig('stockcontrol/general/inline_edit')) {
+            echo "var qty = $(button).getValue();";
+        } else {
+            echo "var qty = $(button).previous('input').getValue();";
+        }
+        ?>
+        new Ajax.Request('<?php echo Mage::helper('adminhtml')->getUrl('*/*/updateStock') ?>', {
+            method: 'post',
+            parameters: { id: fieldId, qty: qty },
+            onSuccess: function(response) {
+                stockcontrol_gridJsObject.reload();
+            }
+        });
+    }
+    function changeStatus(id, instock)
+    {
+        new Ajax.Request('<?php echo Mage::helper('adminhtml')->getUrl('*/*/changeStatus') ?>', {
+            method: 'post',
+            parameters: { id: id, instock: instock },
+            onSuccess: function(response) {
+                stockcontrol_gridJsObject.reload();
+            }
+        });
+    }
+</script>
