@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Ffuenf_StockControl extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category       Ffuenf
+ * @package        Ffuenf_StockControl
+ * @author         Achim Rosenhagen <a.rosenhagen@ffuenf.de>
+ * @copyright      Copyright (c) 2015 ffuenf (http://www.ffuenf.de)
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+*/
+-->
+<config>
+    <modules>
+        <Ffuenf_StockControl>
+            <version>1.0.0</version>
+        </Ffuenf_StockControl>
+    </modules>
+    <global>
+        <blocks>
+            <stockcontrol>
+                <class>Ffuenf_StockControl_Block</class>
+            </stockcontrol>
+        </blocks>
+        <helpers>
+            <ffuenf_stockcontrol>
+                <class>Ffuenf_StockControl_Helper</class>
+            </ffuenf_stockcontrol>
+        </helpers>
+        <models>
+            <stockcontrol>
+                <class>Ffuenf_StockControl_Model</class>
+            </stockcontrol>
+        </models>
+        <resources>
+            <stockcontrol_setup>
+                <setup>
+                    <module>Ffuenf_StockControl</module>
+                </setup>
+            </stockcontrol_setup>
+        </resources>
+    </global>
+    <adminhtml>
+        <layout>
+            <updates>
+                <stockcontrol>
+                    <file>ffuenf/stockcontrol.xml</file>
+                </stockcontrol>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <Ffuenf_StockControl>
+                    <files>
+                        <default>Ffuenf_StockControl.csv</default>
+                    </files>
+                </Ffuenf_StockControl>
+            </modules>
+        </translate>
+    </adminhtml>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <stockcontrol before="Mage_Adminhtml">Ffuenf_StockControl_Adminhtml</stockcontrol>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <default>
+        <stockcontrol>
+            <general>
+              <enabled>1</enabled>
+              <change_status>1</change_status>
+              <sort_by>entity_id</sort_by>
+              <order>asc</order>
+              <inline_edit>0</inline_edit>
+            </general>
+        </stockcontrol>
+    </default>
+    <phpunit>
+        <suite>
+            <modules>
+                <Ffuenf_StockControl/>
+            </modules>
+        </suite>
+    </phpunit>
+</config>

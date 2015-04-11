@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Ffuenf_StockControl extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category       Ffuenf
+ * @package        Ffuenf_StockControl
+ * @author         Achim Rosenhagen <a.rosenhagen@ffuenf.de>
+ * @copyright      Copyright (c) 2015 ffuenf (http://www.ffuenf.de)
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+*/
+-->
+<config>
+    <menu>
+        <catalog>
+            <children>
+                <stockcontrol translate="title" module="ffuenf_stockcontrol">
+                    <title>Manage Stock</title>
+                    <action>adminhtml/stockcontrol</action>
+                </stockcontrol>
+            </children>
+        </catalog>
+    </menu>
+    <acl>
+        <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                    <catalog>
+                        <children>
+                            <stockcontrol translate="title" module="ffuenf_stockcontrol">
+                                <title>Manage Stock</title>
+                                <sort_order>10</sort_order>
+                            </stockcontrol>
+                        </children>
+                    </catalog>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <stockcontrol translate="title" module="ffuenf_stockcontrol">
+                                        <title>StockControl</title>
+                                    </stockcontrol>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

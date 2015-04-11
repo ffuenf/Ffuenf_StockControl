@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<layout>
+    <adminhtml_stockcontrol_index>
+        <reference name="js">
+            <block type="core/template" template="ffuenf/stockcontrol/inline.phtml" />
+        </reference>
+        <reference name="content">
+            <block type="stockcontrol/adminhtml_stockcontrol" name="stockcontrol" />
+        </reference>
+    </adminhtml_stockcontrol_index>
+    <adminhtml_stockcontrol_grid>
+        <reference name="root">
+            <block type="stockcontrol/adminhtml_stockcontrol_grid" name="stockcontrol.grid" output="toHtml" />
+        </reference>
+    </adminhtml_stockcontrol_grid>
+</layout>
