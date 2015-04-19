@@ -21,7 +21,7 @@ class Ffuenf_StockControl_Model_Adminhtml_Stockcontrol extends Mage_Core_Model_A
 {
     public function updateStock()
     {
-        $productid = (int) Mage::app()->getRequest()->getParam('id');
+        $productid = (int)Mage::app()->getRequest()->getParam('id');
         $qty = Mage::app()->getRequest()->getParam('qty');
         
         if (is_numeric($qty))
@@ -44,7 +44,7 @@ class Ffuenf_StockControl_Model_Adminhtml_Stockcontrol extends Mage_Core_Model_A
     }
     public function changeStatus()
     {
-        $productid = (int) Mage::app()->getRequest()->getParam('id');
+        $productid = (int)Mage::app()->getRequest()->getParam('id');
         $instock = Mage::app()->getRequest()->getParam('instock');
         $stockitem = Mage::getModel('cataloginventory/stock_item')->loadByProduct($productid);
         
