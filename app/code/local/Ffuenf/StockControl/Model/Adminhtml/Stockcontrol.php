@@ -9,14 +9,13 @@
  * It is also available through the world-wide-web at this URL:
  * http://opensource.org/licenses/mit-license.php
  * 
- * @category       Ffuenf
- * @package        Ffuenf_StockControl
- * @author         Achim Rosenhagen <a.rosenhagen@ffuenf.de>
- * @copyright      Copyright (c) 2015 ffuenf (http://www.ffuenf.de)
- * @license        http://opensource.org/licenses/mit-license.php MIT License
+ * @category   Ffuenf
+ * @package    Ffuenf_StockControl
+ * @author     Achim Rosenhagen <a.rosenhagen@ffuenf.de>
+ * @copyright  Copyright (c) 2015 ffuenf (http://www.ffuenf.de)
+ * @license    http://opensource.org/licenses/mit-license.php MIT License
 */
 
-namespace Ffuenf\StockControl;
 class Ffuenf_StockControl_Model_Adminhtml_Stockcontrol extends Mage_Core_Model_Abstract
 {
     public function updateStock()

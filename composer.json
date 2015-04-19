@@ -17,10 +17,7 @@
     "colinmollenhour/modman": "*"
   },
   "require-dev": {
-    "ecomdev/ecomdev_phpunit": "dev-dev",
-    "phpunit/phpunit": "4.*",
-    "squizlabs/php_codesniffer": "*",
-    "phpmd/phpmd": "*"
+    "ecomdev/ecomdev_phpunit": "dev-dev"
   },
   "repositories": [
     {
