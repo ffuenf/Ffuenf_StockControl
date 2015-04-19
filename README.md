@@ -25,15 +25,11 @@ modman clone https://github.com/ffuenf/Ffuenf_StockControl
 Deinstallation
 --------------
 
-remove files in
+Use [modman](https://github.com/colinmollenhour/modman) to clear all files and symlinks:
 ```
-.modman/Ffuenf_StockControl
+modman clean Ffuenf_StockControl
 ```
-Use [modman](https://github.com/colinmollenhour/modman) clear all symlinks:
-```
-modman clean
-```
-see `uninstall.sql` to clear all settings of this extension from your database.
+see `uninstall.sql` to clear all entries of this extension from your database.
 
 Credits
 -------
