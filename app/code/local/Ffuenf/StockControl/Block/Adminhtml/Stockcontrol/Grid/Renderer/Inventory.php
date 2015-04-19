@@ -24,9 +24,9 @@ class Ffuenf_StockControl_Block_Adminhtml_Stockcontrol_Grid_Renderer_Inventory e
         $qty = $row->getData($this->getColumn()->getIndex());
         
         if (Mage::getStoreConfig('stockcontrol/general/inline_edit')) {
-            $html = '<input onblur="updateStock(this, ' . $row->getId() . '); return false" class="validate-number input-text ' . $this->getColumn()->getInlineCss() . '" style="width:30%;float:left" type="text" name="qty" value="' . (float) $qty . '" />';
+            $html = '<input onblur="updateStock(this, ' . $row->getId() . '); return false" class="validate-number input-text ' . $this->getColumn()->getInlineCss() . '" style="width:30%;float:left" type="text" name="qty" value="' . (float)$qty . '" />';
         } else {
-            $html = '<input class="validate-number input-text ' . $this->getColumn()->getInlineCss() . '" style="width:30%;float:left" type="text" name="qty" value="' . (float) $qty . '" />';
+            $html = '<input class="validate-number input-text ' . $this->getColumn()->getInlineCss() . '" style="width:30%;float:left" type="text" name="qty" value="' . (float)$qty . '" />';
             $html .= '<button onclick="updateStock(this, ' . $row->getId() . '); return false">' . Mage::helper('ffuenf_stockcontrol')->__('Update') . '</button>';
         }
         return $html;
