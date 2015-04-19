@@ -58,7 +58,12 @@ class Ffuenf_StockControl_Block_Adminhtml_Stockcontrol_Grid extends Mage_Adminht
         $this->setCollection($collection);
         return parent::_prepareCollection();
     }
- 
+
+    /**
+     * Configuration of grid
+     *
+     * @return Mage_Adminhtml_Block_Widget_Grid
+     */
     protected function _prepareColumns()
     {
         $this->addColumn('entity_id', array(
