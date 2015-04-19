@@ -16,27 +16,27 @@
  * @license        http://opensource.org/licenses/mit-license.php MIT License
 */
 
-namespace Ffuenf_StockControl;
+namespace Ffuenf\StockControl;
 class Ffuenf_StockControl_Model_Adminhtml_Stockcontrol extends Mage_Core_Model_Abstract
 {
     public function updateStock()
     {
-        $product_id = (int)Mage::app()->getRequest()->getParam('id');
+        $productid = (int) Mage::app()->getRequest()->getParam('id');
         $qty = Mage::app()->getRequest()->getParam('qty');
         
         if (is_numeric($qty))
         {
-            $stock_item = Mage::getModel('cataloginventory/stock_item')->loadByProduct($product_id);
-            $stock_item->setQty($qty);
+            $stockitem = Mage::getModel('cataloginventory/stock_item')->loadByProduct($productid);
+            $stockitem->setQty($qty);
             
             if ($qty > 0 && Mage::getStoreConfig('stockcontrol/change_status'))
             {
-                $stock_item->setIsInStock(0);
+                $stockitem->setIsInStock(0);
             } else {
-                $stock_item->setIsInStock(1);
+                $stockitem->setIsInStock(1);
             }
             try {
-                $stock_item->save();
+                $stockitem->save();
             } catch (Exception $e) {
                 Mage::log($e->getMessage(), null, 'exception.log');
             }
@@ -44,16 +44,16 @@ class Ffuenf_StockControl_Model_Adminhtml_Stockcontrol extends Mage_Core_Model_A
     }
     public function changeStatus()
     {
-        $product_id = (int)Mage::app()->getRequest()->getParam('id');
+        $productid = (int) Mage::app()->getRequest()->getParam('id');
         $instock = Mage::app()->getRequest()->getParam('instock');
-        $stock_item = Mage::getModel('cataloginventory/stock_item')->loadByProduct($product_id);
+        $stockitem = Mage::getModel('cataloginventory/stock_item')->loadByProduct($productid);
         
         if ($instock)
         {
-            $stock_item->setIsInStock(0);
+            $stockitem->setIsInStock(0);
         } else {
-            $stock_item->setIsInStock(1);
+            $stockitem->setIsInStock(1);
         }
-        $stock_item->save();
+        $stockitem->save();
     }
 }

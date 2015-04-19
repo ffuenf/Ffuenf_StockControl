@@ -16,7 +16,7 @@
  * @license        http://opensource.org/licenses/mit-license.php MIT License
 */
 
-namespace Ffuenf_StockControl;
+namespace Ffuenf\StockControl;
 class Ffuenf_StockControl_Adminhtml_StockcontrolController extends Mage_Adminhtml_Controller_Action
 {
     public function indexAction()
@@ -43,6 +43,11 @@ class Ffuenf_StockControl_Adminhtml_StockcontrolController extends Mage_Adminhtm
         $this->adminStock()->changeStatus();
     }
     
+    /**
+     * Return stockcontrol instance
+     *
+     * @return Ffuenf_StockControl_Model_Adminhtml_Stockcontrol|null
+     */
     public function adminStock()
     {
         return Mage::getModel('stockcontrol/adminhtml_stockcontrol');

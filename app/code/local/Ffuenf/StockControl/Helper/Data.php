@@ -16,7 +16,7 @@
  * @license        http://opensource.org/licenses/mit-license.php MIT License
 */
 
-namespace Ffuenf_StockControl;
+namespace Ffuenf\StockControl;
 class Ffuenf_StockControl_Helper_Data extends Mage_Core_Helper_Abstract
 {
 

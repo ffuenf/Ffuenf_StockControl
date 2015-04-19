@@ -16,10 +16,10 @@
  * @license        http://opensource.org/licenses/mit-license.php MIT License
 */
 
-namespace Ffuenf_StockControl;
+namespace Ffuenf\StockControl;
 class Ffuenf_StockControl_Block_Adminhtml_Stockcontrol_Grid extends Mage_Adminhtml_Block_Widget_Grid
 {
-    
+
     public function __construct()
     {
         parent::__construct();
@@ -30,7 +30,12 @@ class Ffuenf_StockControl_Block_Adminhtml_Stockcontrol_Grid extends Mage_Adminht
         $this->setSaveParametersInSession(true);
         $this->setUseAjax(true);
     }
- 
+
+    /**
+     * Prepare grid collection object
+     *
+     * @return Mage_Adminhtml_Block_Widget_Grid
+     */
     protected function _prepareCollection()
     {
         $collection = Mage::getModel('catalog/product')->getCollection()
@@ -114,6 +119,11 @@ class Ffuenf_StockControl_Block_Adminhtml_Stockcontrol_Grid extends Mage_Adminht
         return parent::_prepareColumns();
     }
     
+    /**
+     * Grid url getter
+     *
+     * @return string current grid url
+     */
     public function getGridUrl()
     {
         return $this->getUrl('*/*/grid', array('_current'=>true));

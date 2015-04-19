@@ -13,16 +13,34 @@
   ],
   "type": "magento-module",
   "require": {
-    "magento-hackathon/magento-composer-installer": "*",
+    "aoepeople/composer-installers": "*",
     "colinmollenhour/modman": "*"
   },
   "require-dev": {
-    "phpunit/phpunit": "3.7.*"
+    "magento/magento": "1.9",
+    "ecomdev/ecomdev_phpunit": "*",
+    "phpunit/phpunit": "4.1.*"
+  },
+  "autoload-dev": {
+    "classmap": ["app", "skin", "vendor/magento/magento/app", "vendor/magento/magento/lib"]
   },
   "repositories": [
     {
       "type": "composer",
       "url": "http://packages.firegento.com"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "magento/magento",
+        "version": "1.9",
+        "source": {
+          "url": "http://svn.magentocommerce.com/source",
+          "type": "svn",
+          "reference": "branches/1.9"
+        },
+        "classmap": ["app/code/local", "app/code/community", "app/code/core", "lib"]
+      }
     }
   ],
   "extra": {
