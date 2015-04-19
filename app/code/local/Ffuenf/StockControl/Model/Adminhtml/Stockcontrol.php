@@ -37,7 +37,7 @@ class Ffuenf_StockControl_Model_Adminhtml_Stockcontrol extends Mage_Core_Model_A
             }
             try {
                 $stockitem->save();
-            } catch (Exception $e) {
+            } catch (\Exception $e) {
                 Mage::log($e->getMessage(), null, 'exception.log');
             }
         }

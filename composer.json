@@ -17,26 +17,28 @@
     "colinmollenhour/modman": "*"
   },
   "require-dev": {
-    "kirchbergerknorr/magento": "1.9.1.*",
     "ecomdev/ecomdev_phpunit": "*",
-    "phpunit/phpunit": "4.1.*"
-  },
-  "autoload-dev": {
-    "classmap": ["vendor/kirchbergerknorr/magento/app", "vendor/kirchbergerknorr/magento/lib"]
+    "phpunit/phpunit": "4.1.*",
+    "squizlabs/php_codesniffer": "*",
+    "phpmd/phpmd": "*"
   },
   "repositories": [
     {
       "type": "composer",
       "url": "http://packages.firegento.com"
-    },
-    {
-      "type": "composer",
-      "url": "http://packages.kirchbergerknorr.de"
     }
   ],
   "extra": {
     "magento-root-dir": "./magento/",
-    "auto-append-gitignore": true,
-    "magento-force": true
+    "map": [
+      [
+        "app/code/local/Ffuenf/StockControl",
+        "app/code/local/Ffuenf/StockControl"
+      ],
+      [
+        "app/etc/modules/Ffuenf_StockControl.xml",
+        "app/etc/modules/Ffuenf_StockControl.xml"
+      ]
+    ]
   }
 }
