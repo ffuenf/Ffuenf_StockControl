@@ -44,4 +44,9 @@ class Ffuenf_StockControl_Helper_Data extends Mage_Core_Helper_Abstract
         }
         return $this->bExtensionActive;
     }
+
+    public function log($message, $level = null, $file = 'ffuenf_stockcontrol.log', $forceLog = false)
+    {
+        Mage::log($message, $level, $file, $forceLog);
+    }
 }

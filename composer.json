@@ -17,12 +17,12 @@
     "colinmollenhour/modman": "*"
   },
   "require-dev": {
-    "magento/magento": "1.9",
+    "kirchbergerknorr/magento": "1.9.1.*",
     "ecomdev/ecomdev_phpunit": "*",
     "phpunit/phpunit": "4.1.*"
   },
   "autoload-dev": {
-    "classmap": ["app", "skin", "vendor/magento/magento/app", "vendor/magento/magento/lib"]
+    "classmap": ["vendor/kirchbergerknorr/magento/app", "vendor/kirchbergerknorr/magento/lib"]
   },
   "repositories": [
     {
@@ -30,20 +30,13 @@
       "url": "http://packages.firegento.com"
     },
     {
-      "type": "package",
-      "package": {
-        "name": "magento/magento",
-        "version": "1.9",
-        "source": {
-          "url": "http://svn.magentocommerce.com/source",
-          "type": "svn",
-          "reference": "branches/1.9"
-        },
-        "classmap": ["app/code/local", "app/code/community", "app/code/core", "lib"]
-      }
+      "type": "composer",
+      "url": "http://packages.kirchbergerknorr.de"
     }
   ],
   "extra": {
-    "magento-root-dir": "./magento/"
+    "magento-root-dir": "./magento/",
+    "auto-append-gitignore": true,
+    "magento-force": true
   }
 }
