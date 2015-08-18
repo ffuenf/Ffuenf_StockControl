@@ -51,4 +51,10 @@ class Ffuenf_StockControl_Adminhtml_StockcontrolController extends Mage_Adminhtm
     {
         return Mage::getModel('stockcontrol/adminhtml_stockcontrol');
     }
+
+    protected function _isAllowed()
+    {
+        return Mage::getSingleton('admin/session')->isAllowed('catalog/stockcontrol');
+    }
+
 }
